@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+.sticky-cursor {
+  @apply fixed top-0 left-0 w-5 h-5 bg-red-500 rounded-full pointer-events-none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 10000; /* Ensure it is above other elements */
+}
