@@ -4,6 +4,8 @@ import GitHub from "@/components/Icons/GitHub/GitHub";
 import LinkedIn from "@/components/Icons/LinkedIn/Linkedin";
 import NameHeader from "@/components/name-header/name-header";
 import Navbar from "@/components/navbar/navbar";
+import ProjectCard from "@/components/project-card/project-card";
+import ProjectList from "@/components/projects/project";
 
 export default function Home() {
   return (
@@ -22,7 +24,7 @@ export default function Home() {
       </div>
 
       {/* Section II */}
-      <div className="lg:w-1/2">{/* Section II Content */}</div>
+      <div className="lg:w-1/2"></div>
     </div>
   );
 }
