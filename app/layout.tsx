@@ -56,5 +56,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-export const __client = true;
