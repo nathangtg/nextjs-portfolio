@@ -21,9 +21,6 @@ export default function Home() {
         <Navbar />
       </div>
 
-      <GitHub />
-      <LinkedIn />
-
       {/* Section II */}
       <div className="lg:w-1/2">{/* Section II Content */}</div>
     </div>
