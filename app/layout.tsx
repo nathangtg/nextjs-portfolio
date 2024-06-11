@@ -37,6 +37,7 @@ export default function RootLayout({
         <title>{(metadata.title || "Default Title").toString()}</title>
         <meta
           name="description"
+          key={"description"}
           content={metadata.description || "Default description"}
         />
       </head>
