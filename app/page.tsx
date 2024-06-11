@@ -1,6 +1,7 @@
 "use client";
 
 import GitHub from "@/components/Icons/GitHub/GitHub";
+import LinkedIn from "@/components/Icons/LinkedIn/Linkedin";
 import NameHeader from "@/components/name-header/name-header";
 import Navbar from "@/components/navbar/navbar";
 
@@ -21,6 +22,7 @@ export default function Home() {
       </div>
 
       <GitHub />
+      <LinkedIn />
 
       {/* Section II */}
       <div className="lg:w-1/2">{/* Section II Content */}</div>
