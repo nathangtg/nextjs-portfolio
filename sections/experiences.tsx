@@ -42,13 +42,13 @@ export default function Experiences() {
     >
       <div className="lg:flex lg:justify-between lg:gap-4">
         <div>
-          <h1 className="pb-6 my-14 text-3xl font-bold text-slate-200 mb-24">
+          <h1 className="my-6 text-3xl font-bold text-slate-200 mb-24">
             Experiences
           </h1>
           {loading ? (
             <LoadingAnimation /> // Conditional rendering for loading animation
           ) : (
-            <ul className=" py-12">
+            <ul className="">
               {experiences.map((experience: Experience) => (
                 <ExperienceItem key={experience.work_id} {...experience} />
               ))}
