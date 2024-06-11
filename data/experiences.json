@@ -1,0 +1,70 @@
+[
+  {
+    "work_id": 1,
+    "company": "Software Mansion",
+    "title": "Software Programmer for React Native IDE",
+    "start_date": "May 2024",
+    "end_date": "Present",
+    "description": "Played a key role in building a next-generation IDE for React Native development using MacOS development tools. Championed a user-centric approach, resulting in a highly rated product.",
+    "technologies": [
+      "React Native",
+      "TypeScript",
+      "Electron",
+      "VSCode Extension API",
+      "Ruby on Rails"
+    ]
+  },
+  {
+    "work_id": 2,
+    "company": "Saint Thomas 1 Senior High School",
+    "title": "Head of Information Technology, Intern",
+    "start_date": "March 2022",
+    "end_date": "May 2022",
+    "description": "Designed and optimized event website using WIX and SEO. Led IT team in setting up and monitoring website, LAN infrastructure and exam systems.",
+    "technologies": [
+      "Network Security",
+      "Intranet Configuration",
+      "Database Management",
+      "Web Development",
+      "WIX Website Builder"
+    ]
+  },
+  {
+    "work_id": 3,
+    "company": "Youth Break the Boundaries Foundation",
+    "title": "Event Staff, Intern",
+    "start_date": "January 2022",
+    "end_date": "February 2022",
+    "description": "Selected as staff for Istanbul Youth Summit 2022 preparation, contributing to event coordination and enhancing attendee experience.",
+    "technologies": [
+      "Wordpress Development",
+      "Website Maintenance",
+      "Website Management"
+    ]
+  },
+  {
+    "work_id": 4,
+    "company": "Youth Break the Boundaries Foundation",
+    "title": "Web Developer, Intern",
+    "start_date": "October 2021",
+    "end_date": "December 2021",
+    "description": "Helped establish website for Istanbul Youth Summit 2022 using WordPress. Gathered design and user requirements through testing and questionnaires.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Wordpress Development",
+      "Figma Designing",
+      "SEO Meta Tagging"
+    ]
+  },
+  {
+    "work_id": 5,
+    "company": "Modern Youth International",
+    "title": "Web Developer, Intern",
+    "start_date": "August 2021",
+    "end_date": "September 2021",
+    "description": "Developed website for Modern Youth International MUN using WIX, boosting online presence and implementing SEO tools.",
+    "technologies": ["WIX Website Builder", "Figma Designing", "HTML", "CSS"]
+  }
+]
