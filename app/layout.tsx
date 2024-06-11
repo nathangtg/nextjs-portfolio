@@ -40,6 +40,7 @@ export default function RootLayout({
           key={"description"}
           content={metadata.description || "Default description"}
         />
+        <link rel="icon" href="./PICTUREREE.ico" />
       </head>
       <body className={`${inter.className} gradient-bg`}>
         <div
