@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function NavLink({
   href,
@@ -7,6 +7,8 @@ export default function NavLink({
   href: string;
   label: string;
 }) {
+  const [isActive, setIsActive] = useState(false);
+
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
@@ -16,12 +18,14 @@ export default function NavLink({
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
+
+    setIsActive(true);
   };
 
   return (
     <li>
       <a
-        className="group flex items-center py-3"
+        className={`group flex items-center py-3 ${isActive ? "active" : ""}`}
         href={href}
         onClick={handleClick}
       >
