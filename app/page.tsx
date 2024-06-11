@@ -1,5 +1,6 @@
 "use client";
 import BioData from "@/sections/bio-data";
+import Projects from "@/sections/projects";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
                     lg:px-24 lg:py-0"
     >
       <BioData />
+      <Projects />
 
       <div className="lg:w-1/2"></div>
     </div>
