@@ -1,7 +1,7 @@
 export default function GitHub() {
   return (
     <a
-      className="block hover:text-slate-200"
+      className="block hover:text-slate-200 text-slate-400"
       href="https://github.com/bchiang7"
       target="_blank"
       rel="noreferrer noopener"

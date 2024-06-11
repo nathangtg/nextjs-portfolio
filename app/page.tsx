@@ -1,11 +1,4 @@
 "use client";
-
-import GitHub from "@/components/Icons/GitHub/GitHub";
-import LinkedIn from "@/components/Icons/LinkedIn/Linkedin";
-import NameHeader from "@/components/name-header/name-header";
-import Navbar from "@/components/navbar/navbar";
-import ProjectCard from "@/components/project-card/project-card";
-import ProjectList from "@/components/projects/project";
 import BioData from "@/sections/bio-data";
 
 export default function Home() {
@@ -17,7 +10,6 @@ export default function Home() {
     >
       <BioData />
 
-      {/* Section II */}
       <div className="lg:w-1/2"></div>
     </div>
   );
