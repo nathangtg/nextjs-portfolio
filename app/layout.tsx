@@ -2,7 +2,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { metadata } from "./metadata";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,34 +12,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // ! Sticky cursor
-  useEffect(() => {
-    const cursor = document.createElement("div");
-    cursor.classList.add("sticky-cursor");
-    document.body.appendChild(cursor);
+  const gradientRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      const x = e.clientX;
+      const y = e.clientY;
+
+      if (gradientRef.current) {
+        gradientRef.current.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+      }
     };
 
     window.addEventListener("mousemove", moveCursor);
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
-      document.body.removeChild(cursor);
     };
   }, []);
 
   return (
     <html lang="en">
       <head>
-        <title>{(metadata.title || "Default Title").toString()}</title>{" "}
+        <title>{(metadata.title || "Default Title").toString()}</title>
         <meta
           name="description"
           content={metadata.description || "Default description"}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div
+          ref={gradientRef}
+          className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+          style={{
+            background:
+              "radial-gradient(600px at 1060px 233px, rgba(29, 78, 216, 0.15), transparent 80%)",
+          }}
+        ></div>
+        {children}
+      </body>
     </html>
   );
 }

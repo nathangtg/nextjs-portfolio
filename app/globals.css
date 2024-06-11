@@ -33,8 +33,27 @@ body {
 }
 
 .sticky-cursor {
-  @apply fixed top-0 left-0 w-5 h-5 bg-red-500 rounded-full pointer-events-none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
-  z-index: 10000; /* Ensure it is above other elements */
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease, background 0.2s ease;
+  background: radial-gradient(
+    circle at center,
+    rgba(85, 87, 150, 1),
+    rgba(33, 25, 101, 1),
+    rgba(44, 47, 47, 0.9047268565629377),
+    rgba(30, 92, 38, 0.8066876408766632)
+  );
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
 }
