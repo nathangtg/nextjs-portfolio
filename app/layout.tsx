@@ -40,7 +40,7 @@ export default function RootLayout({
           content={metadata.description || "Default description"}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} gradient-bg`}>
         <div
           ref={gradientRef}
           className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"

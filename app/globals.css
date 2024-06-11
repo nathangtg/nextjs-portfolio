@@ -51,9 +51,12 @@ body {
 }
 
 .gradient-bg {
+  background: rgb(0, 0, 0);
   background: linear-gradient(
-    112.1deg,
-    rgb(32, 38, 57) 11.4%,
-    rgb(63, 76, 119) 70.2%
+    90deg,
+    rgba(0, 0, 0, 1) 2%,
+    rgba(34, 35, 66, 1) 30%,
+    rgba(19, 14, 59, 1) 58%,
+    rgba(35, 23, 54, 1) 92%
   );
 }
