@@ -43,12 +43,13 @@ export default function RootLayout({
       <body className={`${inter.className} gradient-bg`}>
         <div
           ref={gradientRef}
-          className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute h-max w-max lg:w-[100%] lg:h-[100%]"
+          className="pointer-events-none fixed inset-0 z-30 transition duration-300"
           style={{
             background:
               "radial-gradient(600px at 1060px 233px, rgba(29, 78, 216, 0.15), transparent 80%)",
           }}
         ></div>
+
         {children}
       </body>
     </html>

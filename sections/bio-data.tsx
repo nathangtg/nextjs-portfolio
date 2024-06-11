@@ -4,11 +4,11 @@ import Navbar from "@/components/navbar/navbar";
 
 export default function BioData() {
   return (
-    <div className="w-full h-[100%] after:fixed">
+    <div className="w-full h-[100%] sticky top-0 z-10">
       <NameHeader
         name="Nathan G"
         role="Information Technology Student"
-        description="I realise and build my ideas with technology and development."
+        description="I realize and build my ideas with technology and development."
       />
       <Navbar />
       <IconContainer />

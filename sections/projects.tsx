@@ -26,7 +26,7 @@ export default function Projects() {
 
   return (
     <section
-      className="mt-16 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      className="mt-8 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       id="projects"
     >
       <h2 className="text-3xl font-bold text-slate-200 mb-24">Projects</h2>
