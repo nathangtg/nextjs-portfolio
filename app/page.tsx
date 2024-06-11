@@ -1,5 +1,6 @@
 "use client";
 
+import GitHub from "@/components/Icons/GitHub/GitHub";
 import NameHeader from "@/components/name-header/name-header";
 import Navbar from "@/components/navbar/navbar";
 
@@ -18,6 +19,8 @@ export default function Home() {
         />
         <Navbar />
       </div>
+
+      <GitHub />
 
       {/* Section II */}
       <div className="lg:w-1/2">{/* Section II Content */}</div>
