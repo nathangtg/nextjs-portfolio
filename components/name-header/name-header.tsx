@@ -8,7 +8,7 @@ export default function NameHeader({
   description: string;
 }) {
   return (
-    <div className="lg:w-1/2 py-24 ">
+    <div className="w-full py-24 ">
       <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
         <a href="/">{name}</a>
       </h1>

@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar/navbar";
 
 export default function BioData() {
   return (
-    <div className="w-full">
+    <div className="w-full h-[100%] after:fixed">
       <NameHeader
         name="Nathan G"
         role="Information Technology Student"

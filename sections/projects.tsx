@@ -1,7 +1,9 @@
+import LoadingAnimation from "@/components/loading-component/loading-component";
 import ProjectList from "@/components/projects/project";
 import { useEffect, useState } from "react";
 
 export default function Projects() {
+  const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -12,19 +14,28 @@ export default function Projects() {
           throw new Error("Failed to fetch projects");
         }
         const data = await res.json();
-        console.log(data);
         setProjects(data);
       } catch (error) {
         console.error("Error fetching projects:", error);
+      } finally {
+        setLoading(false);
       }
     }
     fetchProjects();
   }, []);
 
   return (
-    <section className="mt-16">
-      <h2 className="text-3xl font-bold text-slate-200">Projects</h2>
-      {/* <ProjectList projects={projects} /> */}
+    <section
+      className="mt-16 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      id="projects"
+    >
+      <h2 className="text-3xl font-bold text-slate-200 mb-24">Projects</h2>
+      {loading ? (
+        <LoadingAnimation />
+      ) : (
+        <ProjectList projects={projects} />
+      )}{" "}
+      {/* Conditional rendering */}
     </section>
   );
 }

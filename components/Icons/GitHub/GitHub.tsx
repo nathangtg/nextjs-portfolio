@@ -2,7 +2,7 @@ export default function GitHub() {
   return (
     <a
       className="block hover:text-slate-200 text-slate-400"
-      href="https://github.com/bchiang7"
+      href="https://github.com/nathangtg"
       target="_blank"
       rel="noreferrer noopener"
       aria-label="GitHub (opens in a new tab)"

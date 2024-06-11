@@ -10,7 +10,7 @@ interface Project {
 
 export default function ProjectList({ projects }: { projects: Project[] }) {
   return (
-    <ul className="mb-12">
+    <ul className="mb-12 my-6">
       {projects.map((project, index) => (
         <ProjectCard key={index} project={project} />
       ))}

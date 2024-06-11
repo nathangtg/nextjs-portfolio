@@ -58,7 +58,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             ))}
           </ul>
         </div>
-        <Image
+        {/* <Image
           alt={name}
           loading="lazy"
           width="200"
@@ -67,8 +67,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           data-nimg="1"
           className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
           style={{ color: "transparent" }}
-          src={imageUrl}
-        />
+          src={`/${imageUrl}`}
+        /> */}
       </div>
     </li>
   );

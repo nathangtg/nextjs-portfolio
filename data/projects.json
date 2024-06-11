@@ -2,7 +2,7 @@
   {
     "name": "React Native IDE",
     "description": "Spearheaded the development of a cutting-edge Integrated Development Environment (IDE) tailored for React Native projects, harnessing the power of MacOS development tools.",
-    "imageUrl": "https://i.imgur.com/6tuY2Zf.png",
+    "imageUrl": "public/assets/images/RNIDE.jpg",
     "technologies": [
       "TypeScript",
       "JavaScript",
@@ -16,7 +16,7 @@
   {
     "name": "Appetite Connect API / User-Interface",
     "description": "Developed Laravel as the back-end tool with support from Sanctum, Breeze, Passport, and Filament to develop the API. Developed a user-interface using the Angular framework.",
-    "imageUrl": "https://i.imgur.com/oQlSvGY.png",
+    "imageUrl": "public/assets/images/APPETITEAPI.jpg",
     "technologies": [
       "MySQL",
       "Laravel",
@@ -31,14 +31,14 @@
   {
     "name": "Personal Website 1",
     "description": "Created a personal website to showcase and display my online presence, with SMTP for easy contact system, and interactive UI with Framer Motion and Tailwind CSS.",
-    "imageUrl": "https://i.imgur.com/SoBZvbV.png",
+    "imageUrl": "/assets/images/PERSWEB.jpg",
     "technologies": ["React JS", "JavaScript", "SMTP", "Vercel", "GitHub"],
     "projectLink": "https://nathangtg.vercel.app/"
   },
   {
     "name": "Social Hive",
     "description": "Implemented Real-Time Texting, Image Uploading, and Profile Modification functionalities, with an admin panel for CRUD operations using React and Laravel frameworks.",
-    "imageUrl": "https://i.imgur.com/6NdjgXQ.png",
+    "imageUrl": "public/assets/images/SCHIVE.jpg",
     "technologies": ["Laravel", "React", "JavaScript", "SMTP", "GitHub", "Git"],
     "projectLink": "https://github.com/nathangtg/social-hive"
   }

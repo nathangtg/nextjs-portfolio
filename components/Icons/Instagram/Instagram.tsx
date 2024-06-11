@@ -2,7 +2,7 @@ export default function Instagram() {
   return (
     <a
       className="block hover:text-slate-200 text-slate-400"
-      href="https://instagram.com/bchiang7"
+      href="https://instagram.com/nathan_apg"
       target="_blank"
       rel="noreferrer noopener"
       aria-label="Instagram (opens in a new tab)"
