@@ -4,7 +4,6 @@ import TechBox from "../../tech-box/tech-box";
 interface ExperienceContentProps {
   title: string;
   company: string;
-  companyLink: string;
   description: string;
   technologies: string[];
 }
@@ -12,7 +11,6 @@ interface ExperienceContentProps {
 const ExperienceContent: React.FC<ExperienceContentProps> = ({
   title,
   company,
-  companyLink,
   description,
   technologies,
 }) => {
@@ -22,7 +20,6 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
         <div>
           <a
             className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-            href={companyLink}
             target="_blank"
             rel="noreferrer noopener"
             aria-label={`${title} at ${company} (opens in a new tab)`}

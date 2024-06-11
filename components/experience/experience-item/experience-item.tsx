@@ -26,7 +26,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         <ExperienceContent
           title={title}
           company={company}
-          companyLink={companyLink}
           description={description}
           technologies={technologies}
         />
