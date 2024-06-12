@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import TypingText from "../components/typing-animation/typing-text";
+import { motion } from "framer-motion";
+import AnimatedText from "../components/typing-animation/typing-text";
 
-const About = () => {
+const About: React.FC = () => {
+  const [isText1Done, setIsText1Done] = useState(false);
+
+  const handleText1Complete = () => {
+    setIsText1Done(true);
+  };
+
+  const aboutText1 =
+    "Throughout my academic journey at Sunway College, pursuing a Diploma in Information Technology, I have cultivated a diverse skill set encompassing front-end and back-end development, programming languages, and web technologies. With a strong foundation in React, Angular, Laravel, SQL, and other cutting-edge tools, I am well-equipped to tackle complex software engineering challenges.";
+
   return (
     <section
       id="about"
@@ -11,25 +23,16 @@ const About = () => {
         About
       </h1>
       <div className="py-8 my-12">
-        <p className="mb-4">
-          Throughout my academic journey at Sunway College, pursuing a Diploma
-          in Information Technology, I have cultivated a diverse skill set
-          encompassing front-end and back-end development, programming
-          languages, and web technologies. With a strong foundation in React,
-          Angular, Laravel, SQL, and other cutting-edge tools, I am
-          well-equipped to tackle complex software engineering challenges.
-        </p>
-        <br />
-        <p className="mb-4">
-          My internships and volunteer experiences have provided me with
-          hands-on opportunities to apply my knowledge, contributing to projects
-          like building a next-generation IDE for React Native and optimizing
-          event websites. Beyond technical proficiency, I possess a deep
-          commitment to delivering user-centric solutions, rooted in
-          collaboration, attention to detail, and a drive to bring innovative
-          visions to life.
-        </p>
-        <br />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <AnimatedText
+            texts={[aboutText1]}
+            onComplete={() => console.log("Animation completed")}
+          />
+        </motion.div>
       </div>
     </section>
   );
