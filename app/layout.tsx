@@ -109,8 +109,8 @@ export default function RootLayout({
                     initial={{ x: 0 }}
                     animate={progress >= 80 ? { x: "-100%" } : {}}
                     transition={{
-                      duration: 1.2, // Increased duration from 0.4 to 1.2 seconds
-                      delay: progress >= 80 ? 0.8 : 0, // Increased delay from 0.4 to 0.8 seconds
+                      duration: 1.8,
+                      delay: progress >= 80 ? 0.8 : 0,
                     }}
                   >
                     N
@@ -120,7 +120,7 @@ export default function RootLayout({
                     <motion.span
                       initial={{ x: "100%" }}
                       animate={{ x: "-60%" }}
-                      transition={{ duration: 0.2 }} // Increased duration from 0.4 to 1.2 seconds
+                      transition={{ duration: 0.6 }}
                       className="absolute left-2"
                     >
                       DONE
