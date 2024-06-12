@@ -14,6 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const gradientRef = useRef<HTMLDivElement>(null);
 
@@ -48,6 +49,23 @@ export default function RootLayout({
     }
   }, [isAnimationComplete]);
 
+  useEffect(() => {
+    if (!isLoading) return;
+
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => {
+        const newProgress = prevProgress + 1;
+        if (newProgress === 100) {
+          clearInterval(interval);
+          setIsAnimationComplete(true);
+        }
+        return newProgress;
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [isLoading]);
+
   return (
     <html lang="en">
       <head>
@@ -58,6 +76,7 @@ export default function RootLayout({
           content={metadata.description || "Default description"}
         />
         <link rel="icon" sizes="180x180" href="./favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${inter.className} gradient-bg overflow-x-hidden`}>
         <div
@@ -65,32 +84,48 @@ export default function RootLayout({
           className="pointer-events-none fixed inset-0 z-30 transition duration-300"
           style={{
             background:
-              "radial-gradient(600px at 1060px 233px, rgba(29, 78, 216, 0.15), transparent 80%)",
+              "radial-gradient(600px at 50% 50%, rgba(29, 78, 216, 0.15), transparent 80%)",
           }}
         ></div>
 
         <AnimatePresence>
-          {isLoading && (
+          {isLoading && !isAnimationComplete && (
             <motion.div
               className="fixed inset-0 flex justify-center items-center z-40 bg-black text-purple-500 overflow-x-hidden"
               key="splash-screen"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, scale: 50 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.75 }}
             >
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4 }}
+                style={{ textAlign: "center" }}
               >
-                <motion.div
-                  className="text-4xl font-sans"
-                  initial={{ scale: 1 }}
-                  animate={{ scale: 5 }}
-                  transition={{ delay: 0.5, duration: 0.5 }}
-                >
-                  N
+                <motion.div className="text-4xl font-sans flex items-center relative">
+                  <motion.span
+                    initial={{ x: 0 }}
+                    animate={progress >= 80 ? { x: "-100%" } : {}}
+                    transition={{
+                      duration: 1.2, // Increased duration from 0.4 to 1.2 seconds
+                      delay: progress >= 80 ? 0.8 : 0, // Increased delay from 0.4 to 0.8 seconds
+                    }}
+                  >
+                    N
+                  </motion.span>
+                  {progress < 80 && <span>{`${progress}%`}</span>}
+                  {progress >= 80 && (
+                    <motion.span
+                      initial={{ x: "100%" }}
+                      animate={{ x: "-60%" }}
+                      transition={{ duration: 0.2 }} // Increased duration from 0.4 to 1.2 seconds
+                      className="absolute left-2"
+                    >
+                      DONE
+                    </motion.span>
+                  )}
                 </motion.div>
               </motion.div>
             </motion.div>
