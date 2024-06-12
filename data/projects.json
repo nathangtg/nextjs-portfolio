@@ -14,9 +14,8 @@
     "projectLink": "https://github.com/software-mansion/react-native-ide"
   },
   {
-    "name": "Appetite Connect API / User-Interface",
-    "description": "Developed Laravel as the back-end tool with support from Sanctum, Breeze, Passport, and Filament to develop the API. Developed a user-interface using the Angular framework.",
-    "imageUrl": "public/assets/images/APPETITEAPI.jpg",
+    "name": "Appetite Connect API",
+    "description": "Developed Laravel as the back-end tool with support from Sanctum, Breeze, Passport, and Filament to develop the API ",
     "technologies": [
       "MySQL",
       "Laravel",
@@ -27,6 +26,12 @@
       "GitHub"
     ],
     "projectLink": "https://github.com/nathangtg/appetite-api"
+  },
+  {
+    "name": "Appetite Connect UI",
+    "description": "Developed Laravel as the back-end tool with support from Sanctum, Breeze, Passport, and Filament to develop the API ",
+    "technologies": ["Angular", "Tailwind CSS", "SMTP", "TypeScript", "GitHub"],
+    "projectLink": "https://github.com/nathangtg/appetite-ui-angular"
   },
   {
     "name": "Personal Website 1",
@@ -41,5 +46,25 @@
     "imageUrl": "public/assets/images/SCHIVE.jpg",
     "technologies": ["Laravel", "React", "JavaScript", "SMTP", "GitHub", "Git"],
     "projectLink": "https://github.com/nathangtg/social-hive"
+  },
+  {
+    "name": "AeroSystem CLI",
+    "description": "Developed a CLI application to manage and automate the process of airline check-ins, with a user-friendly interface and a robust object-oriented system.",
+    "imageUrl": "public/assets/images/PERSWEB2.jpg",
+    "technologies": [
+      "C#",
+      ".NET Framework",
+      ".NET Core",
+      "Object-Oriented",
+      "GitHub"
+    ],
+    "projectLink": "https://github.com/nathangtg/AeroSystem"
+  },
+  {
+    "name": "EcooCycle",
+    "description": "The project harnesses the power of Vanilla PHP for server-side logic and integrates the Spline library to incorporate stunning 3D modeling into the web interface.",
+    "imageUrl": "public/assets/images/PERSWEB3.jpg",
+    "technologies": ["React JS", "JavaScript", "Spline", "PHP", "GitHub"],
+    "projectLink": "https://github.com/nathangtg/EcooCycle"
   }
 ]

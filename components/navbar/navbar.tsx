@@ -7,6 +7,7 @@ export default function Navbar() {
         <NavLink href="#about" label="About" />
         <NavLink href="#experience" label="Experience" />
         <NavLink href="#projects" label="Projects" />
+        <NavLink href="#certificates" label="Certificates" />
       </ul>
     </nav>
   );

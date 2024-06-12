@@ -1,4 +1,5 @@
 import About from "./about";
+import Certificates from "./certificates";
 import Experiences from "./experiences";
 import Projects from "./projects";
 
@@ -8,6 +9,7 @@ export default function CompiledPortfolio() {
       <About />
       <Experiences />
       <Projects />
+      <Certificates />
     </div>
   );
 }
