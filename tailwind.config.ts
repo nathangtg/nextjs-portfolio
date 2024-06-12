@@ -19,7 +19,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities }: { addUtilities: Function }) {
       const newUtilities = {
         ".overflow-x-hidden-mobile": {
           "@apply overflow-x-hidden": {},
