@@ -4,6 +4,9 @@ const metadata: Metadata = {
   title: "Nathan G - IT Student & Full-Stack Developer",
   description:
     "Welcome to the personal website of Nathan G, an IT student and full-stack developer based in Subang Jaya, Malaysia. Explore Nathan's portfolio, skills, experience, and achievements.",
+  icons: {
+    icon: "./favicon.ico",
+  },
 };
 
 export { metadata };

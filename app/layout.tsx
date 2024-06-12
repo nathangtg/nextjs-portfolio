@@ -57,7 +57,7 @@ export default function RootLayout({
           key="description"
           content={metadata.description || "Default description"}
         />
-        <link rel="icon" href="./PICTUREREE.ico" />
+        <link rel="icon" sizes="180x180" href="./favicon.ico" />
       </head>
       <body className={`${inter.className} gradient-bg`}>
         <div
