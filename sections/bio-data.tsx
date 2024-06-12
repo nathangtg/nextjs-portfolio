@@ -8,7 +8,7 @@ export default function BioData() {
       <NameHeader
         name="Nathan G"
         role="Information Technology Student"
-        description="I realize and build my ideas with technology and development."
+        description="I realize and build my ideas with various technologies and development."
       />
       <Navbar />
       <IconContainer />

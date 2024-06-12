@@ -13,8 +13,30 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        mobile: { max: "640px" },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".overflow-x-hidden-mobile": {
+          "@apply overflow-x-hidden": {},
+        },
+        "@screen mobile": {
+          ".overflow-x-hidden-mobile": {
+            "@apply overflow-x-hidden": {},
+          },
+        },
+        "@screen md": {
+          ".overflow-x-hidden-mobile": {
+            "@apply overflow-x-visible": {},
+          },
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };
 export default config;

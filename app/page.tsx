@@ -8,7 +8,7 @@ export default function Home() {
       className="  lg:flex lg:justify-between lg:gap-4 mx-auto min-h-screen 
                     max-w-screen-xl px-6 py-24 font-sans md:px-12 md:py-20 
                     lg:px-24 lg:py-0 h-max bg-fixed bg-cover bg-center bg-no-repeat
-                    sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-visible"
+                     overflow-x-hidden-mobile"
     >
       <div className="lg:w-1/2 h-[100%] lg:sticky top-0 z-10">
         <BioData />

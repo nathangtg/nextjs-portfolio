@@ -33,6 +33,18 @@ body {
   }
 }
 
+/* globals.css */
+@layer utilities {
+  .overflow-x-hidden-mobile {
+    @apply overflow-x-hidden;
+  }
+  @media (min-width: 640px) {
+    .overflow-x-hidden-mobile {
+      @apply overflow-x-visible;
+    }
+  }
+}
+
 .sticky-cursor {
   position: fixed;
   width: 200px;
@@ -62,4 +74,10 @@ body {
   );
   position: relative;
   background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .overflow-x-hidden-mobile {
+    overflow-x: hidden;
+  }
 }
