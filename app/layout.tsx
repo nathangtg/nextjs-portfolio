@@ -2,8 +2,9 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { metadata } from "./metadata";
+import { AnimatePresence, motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   const gradientRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,13 +34,27 @@ export default function RootLayout({
     };
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimationComplete(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isAnimationComplete) {
+      setIsLoading(false);
+    }
+  }, [isAnimationComplete]);
+
   return (
     <html lang="en">
       <head>
         <title>{(metadata.title || "Default Title").toString()}</title>
         <meta
           name="description"
-          key={"description"}
+          key="description"
           content={metadata.description || "Default description"}
         />
         <link rel="icon" href="./PICTUREREE.ico" />
@@ -52,7 +69,35 @@ export default function RootLayout({
           }}
         ></div>
 
-        {children}
+        <AnimatePresence>
+          {isLoading && (
+            <motion.div
+              className="fixed inset-0 flex justify-center items-center z-40 bg-black text-purple-500"
+              key="splash-screen"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, scale: 50 }}
+              transition={{ duration: 1 }}
+            >
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.div
+                  className="text-4xl font-sans"
+                  initial={{ scale: 1 }}
+                  animate={{ scale: 5 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                >
+                  N
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {!isLoading && children}
       </body>
     </html>
   );

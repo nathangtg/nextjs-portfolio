@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import ExperienceItem from "@/components/experience/experience-item/experience-item";
 import LoadingAnimation from "@/components/loading-component/loading-component";
 
@@ -15,7 +17,7 @@ interface Experience {
 
 export default function Experiences() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
-  const [loading, setLoading] = useState(true); // Add a loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchExperiences() {
@@ -46,16 +48,44 @@ export default function Experiences() {
             Experiences
           </h1>
           {loading ? (
-            <LoadingAnimation /> // Conditional rendering for loading animation
+            <LoadingAnimation />
           ) : (
             <ul className="">
-              {experiences.map((experience: Experience) => (
-                <ExperienceItem key={experience.work_id} {...experience} />
-              ))}
+              <AnimatePresence>
+                {experiences.map((experience: Experience) => (
+                  <ExperienceListItem
+                    key={experience.work_id}
+                    experience={experience}
+                  />
+                ))}
+              </AnimatePresence>
             </ul>
           )}
         </div>
       </div>
     </section>
+  );
+}
+
+interface ExperienceListItemProps {
+  experience: Experience;
+}
+
+function ExperienceListItem({ experience }: ExperienceListItemProps) {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.li
+      ref={ref}
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0, x: 100 }}
+    >
+      <ExperienceItem {...experience} />
+    </motion.li>
   );
 }
