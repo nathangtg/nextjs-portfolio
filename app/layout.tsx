@@ -59,7 +59,7 @@ export default function RootLayout({
         />
         <link rel="icon" sizes="180x180" href="./favicon.ico" />
       </head>
-      <body className={`${inter.className} gradient-bg`}>
+      <body className={`${inter.className} gradient-bg overflow-x-hidden`}>
         <div
           ref={gradientRef}
           className="pointer-events-none fixed inset-0 z-30 transition duration-300"
@@ -72,7 +72,7 @@ export default function RootLayout({
         <AnimatePresence>
           {isLoading && (
             <motion.div
-              className="fixed inset-0 flex justify-center items-center z-40 bg-black text-purple-500"
+              className="fixed inset-0 flex justify-center items-center z-40 bg-black text-purple-500 overflow-x-hidden"
               key="splash-screen"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
