@@ -23,7 +23,7 @@ export default function CertificateCard({
               <span>{Title}</span>
             </span>
           </h3>
-          <p className="mt-2 text-sm leading-normal text-slate-400 text-teal-300">
+          <p className="mt-2 text-sm leading-normal text-teal-300">
             {Issuing_organisation}
           </p>
           <p className="mt-2 text-sm leading-normal text-slate-400">{Year}</p>

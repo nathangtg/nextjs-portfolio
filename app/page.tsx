@@ -1,4 +1,5 @@
 "use client";
+import FloatingButton from "@/components/floating-button/floating-button";
 import BioData from "@/sections/bio-data";
 import CompiledPortfolio from "@/sections/compiled-portfolio";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <div className="lg:w-1/2">
         <CompiledPortfolio />
       </div>
+      <FloatingButton />
     </div>
   );
 }
