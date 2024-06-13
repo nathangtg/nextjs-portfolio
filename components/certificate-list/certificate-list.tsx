@@ -7,6 +7,7 @@ interface Certificate {
   Title: string;
   Year: number;
   Issuing_organisation: string;
+  link: string;
 }
 
 export default function CertificateList({
