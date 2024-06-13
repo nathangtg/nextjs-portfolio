@@ -4,7 +4,7 @@ import LinkedIn from "../LinkedIn/Linkedin";
 
 export default function IconContainer() {
   return (
-    <div className="mt-auto flex items-center flex-wrap gap-6 lg:py-24 md:py-4 sm:py-2">
+    <div className="mt-auto flex items-center flex-wrap gap-6 lg:py-12 md:py-4 sm:py-2">
       <GitHub />
       <LinkedIn />
       <Instagram />

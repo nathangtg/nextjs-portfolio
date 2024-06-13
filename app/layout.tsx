@@ -5,6 +5,7 @@ import "./globals.css";
 import { useEffect, useRef, useState } from "react";
 import { metadata } from "./metadata";
 import { AnimatePresence, motion } from "framer-motion";
+import Draw from "@/components/svg-animation/draw-svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -95,8 +96,8 @@ export default function RootLayout({
               key="splash-screen"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0, scale: 50 }}
-              transition={{ duration: 0.75 }}
+              exit={{ opacity: 0, scale: 100 }}
+              transition={{ duration: 1 }}
             >
               <motion.div
                 initial={{ scale: 0 }}
@@ -104,7 +105,7 @@ export default function RootLayout({
                 transition={{ duration: 0.4 }}
                 style={{ textAlign: "center" }}
               >
-                <motion.div className="text-4xl font-sans flex items-center relative">
+                <motion.div className="text-4xl font-sans flex items-center justify-center">
                   <motion.span
                     initial={{ x: 0 }}
                     animate={progress >= 80 ? { x: "-100%" } : {}}
@@ -113,22 +114,52 @@ export default function RootLayout({
                       delay: progress >= 80 ? 0.8 : 0,
                     }}
                   >
-                    N
+                    {progress < 80 && <span>{`N${progress}%`}</span>}
                   </motion.span>
-                  {progress < 80 && <span>{`${progress}%`}</span>}
                   {progress >= 80 && (
-                    <motion.span
+                    <motion.div
                       initial={{ x: "100%" }}
-                      animate={{ x: "-60%" }}
+                      animate={{ x: 0 }}
                       transition={{ duration: 0.6 }}
-                      className="absolute left-2"
+                      className="absolute"
+                      style={{
+                        left: "50%",
+                        top: "35%",
+                        transform: "translateX(-50%)",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
                     >
-                      DONE
-                    </motion.span>
+                      <motion.div
+                        initial={{ opacity: 0, x: -70 }}
+                        animate={{ opacity: 1, x: -90, y: 50 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                      >
+                        <span className="text-4xl font-sans text-white justify-center self-center">
+                          NG
+                        </span>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                      >
+                        <Draw />
+                      </motion.div>
+                    </motion.div>
                   )}
                 </motion.div>
               </motion.div>
             </motion.div>
+          )}
+
+          {!isLoading && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.75 }}
+            ></motion.div>
           )}
         </AnimatePresence>
 

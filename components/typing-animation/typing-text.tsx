@@ -14,6 +14,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ texts, onComplete }) => {
     texts[currentIndex].slice(0, latest)
   );
   const [animationCompleted, setAnimationCompleted] = useState(false);
+  const [cursorVisible, setCursorVisible] = useState(true); // State to control cursor visibility
 
   const textLengthRef = useRef(texts[currentIndex].length);
 
@@ -31,6 +32,14 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ texts, onComplete }) => {
 
     return controls.stop;
   }, [count]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCursorVisible((prev) => !prev); // Toggle cursor visibility
+    }, 500); // Blink interval in milliseconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (animationCompleted) {
@@ -51,6 +60,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ texts, onComplete }) => {
   return (
     <p className={animationCompleted ? "animation-completed" : ""}>
       <motion.span>{displayText}</motion.span>
+      {cursorVisible && (
+        <span className="cursor absolute w-1 h-5 bg-white"></span>
+      )}
     </p>
   );
 };

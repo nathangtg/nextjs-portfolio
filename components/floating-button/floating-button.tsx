@@ -29,7 +29,7 @@ const FloatingButton: React.FC = () => {
   ];
 
   return (
-    <div className="fixed bottom-10 right-10 z-50 md:hidden lg:hidden">
+    <div className="fixed bottom-10 right-10 z-50 lg:hidden">
       <motion.button
         className="w-12 h-12 bg-purple-800 text-white rounded-full flex justify-center items-center focus:outline-none"
         onClick={toggleMenu}
