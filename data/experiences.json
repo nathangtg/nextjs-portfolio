@@ -1,6 +1,19 @@
 [
   {
     "work_id": 1,
+    "company": "Valiram Group (POSable)",
+    "title": "Software Engineer, Freelancer",
+    "start_date": "August 2024",
+    "end_date": "Present",
+    "description": "Played a key role in building a next-generation IDE for React Native development using MacOS development tools. Championed a user-centric approach, resulting in a highly rated product.",
+    "technologies": [
+      "Software Development",
+      "Software Engineering",
+      "SDLC Methodologies"
+    ]
+  },
+  {
+    "work_id": 2,
     "company": "Software Mansion",
     "title": "Software Engineer, Freelancer",
     "start_date": "May 2024",
@@ -15,7 +28,7 @@
     ]
   },
   {
-    "work_id": 2,
+    "work_id": 3,
     "company": "Saint Thomas 1 Senior High School",
     "title": "Head of Information Technology, Intern",
     "start_date": "March 2022",
@@ -30,7 +43,7 @@
     ]
   },
   {
-    "work_id": 3,
+    "work_id": 4,
     "company": "Youth Break the Boundaries Foundation",
     "title": "Event Staff, Intern",
     "start_date": "January 2022",
@@ -43,7 +56,7 @@
     ]
   },
   {
-    "work_id": 4,
+    "work_id": 5,
     "company": "Youth Break the Boundaries Foundation",
     "title": "Software Engineer, Intern",
     "start_date": "October 2021",
@@ -59,7 +72,7 @@
     ]
   },
   {
-    "work_id": 5,
+    "work_id": 6,
     "company": "Modern Youth International",
     "title": "Web Developer, Intern",
     "start_date": "August 2021",
