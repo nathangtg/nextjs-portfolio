@@ -34,6 +34,20 @@
     "projectLink": "https://github.com/nathangtg/appetite-ui-angular"
   },
   {
+    "name": "Appetite Connect Cashier Application",
+    "description": "Developed the Cashier Application for Appetite Connect using Flutter Desktop for a seamless and user-friendly experience.",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "SQLite",
+      "GitHub",
+      "Git",
+      "Flutter Services",
+      "Desktop Application"
+    ],
+    "projectLink": "https://github.com/nathangtg/appetite-api"
+  },
+  {
     "name": "Personal Website 1",
     "description": "Created a personal website to showcase and display my online presence, with SMTP for easy contact system, and interactive UI with Framer Motion and Tailwind CSS.",
     "imageUrl": "/assets/images/PERSWEB.jpg",
