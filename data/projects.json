@@ -14,7 +14,7 @@
     "projectLink": "https://github.com/software-mansion/react-native-ide"
   },
   {
-    "name": "Appetite Connect API",
+    "name": "Appetite Connect API (FYP Backend)",
     "description": "Developed Laravel as the back-end tool with support from Sanctum, Breeze, Passport, and Filament to develop the API ",
     "technologies": [
       "MySQL",
@@ -28,13 +28,13 @@
     "projectLink": "https://github.com/nathangtg/appetite-api"
   },
   {
-    "name": "Appetite Connect UI",
+    "name": "Appetite Connect UI (FYP Frontend)",
     "description": "Developed Laravel as the back-end tool with support from Sanctum, Breeze, Passport, and Filament to develop the API ",
     "technologies": ["Angular", "Tailwind CSS", "SMTP", "TypeScript", "GitHub"],
     "projectLink": "https://github.com/nathangtg/appetite-ui-angular"
   },
   {
-    "name": "Appetite Connect Cashier Application",
+    "name": "Appetite Connect Cashier Application (FYP Desktop App)",
     "description": "Developed the Cashier Application for Appetite Connect using Flutter Desktop for a seamless and user-friendly experience.",
     "technologies": [
       "Flutter",
