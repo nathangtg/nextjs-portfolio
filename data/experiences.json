@@ -2,14 +2,20 @@
   {
     "work_id": 1,
     "company": "Valiram Group (POSable)",
-    "title": "Software Engineer, Intern",
+    "title": "DevOps Automation Engineer, Intern",
     "start_date": "August 2024",
     "end_date": "Present",
     "description": "Starting internship as a software engineer at POSable from August 2024, a subsidiary of Valiram Group.",
     "technologies": [
-      "Software Development",
-      "Software Engineering",
-      "SDLC Methodologies"
+      "SDLC Methodologies",
+      "STLC Methodologies",
+      "DevOps Automation",
+      "CI/CD Pipelines (YAML, XML)",
+      "Microsoft Azure DevOps",
+      "Appium Automation (Java/TestNG/JUnit)",
+      "Playwright Automation (JS/TS)",
+      "Selenium Automation (Python)",
+      "QA Automation"
     ]
   },
   {
