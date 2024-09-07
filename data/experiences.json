@@ -83,6 +83,12 @@
     "start_date": "April 2021",
     "end_date": "July 2021",
     "description": "Developed website for Modern Youth International MUN using WIX, boosting online presence and implementing SEO tools.",
-    "technologies": ["WIX Website Builder", "Figma Designing", "HTML", "CSS", "JavaScript"]
+    "technologies": [
+      "WIX Website Builder",
+      "Figma Designing",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
   }
 ]
