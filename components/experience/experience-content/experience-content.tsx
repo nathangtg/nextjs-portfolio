@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import TechBox from "../../tech-box/tech-box";
 
 interface ExperienceContentProps {
@@ -14,6 +15,22 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
   description,
   technologies,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const initialTechCount = 3;
+  const shouldShowMore = technologies.length > initialTechCount;
+
+  const visibleTechnologies = isExpanded 
+    ? technologies 
+    : technologies.slice(0, initialTechCount);
+
+  const handleToggle = () => {
+    setIsTransitioning(true);
+    setIsExpanded(!isExpanded);
+    // Reset transition state after animation completes
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
+
   return (
     <div className="z-10 sm:col-span-6">
       <h3 className="font-medium leading-snug text-slate-200">
@@ -48,11 +65,60 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
         </div>
       </h3>
       <p className="mt-2 text-sm leading-normal">{description}</p>
-      <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-        {technologies.map((tech) => (
-          <TechBox key={tech} tech={tech} />
-        ))}
-      </ul>
+      <div className="relative">
+        <ul 
+          className="mt-2 flex flex-wrap items-center gap-2"
+          aria-label="Technologies used"
+        >
+          {visibleTechnologies.map((tech, index) => (
+            <li
+              key={tech}
+              className="transform transition-all duration-300 ease-in-out"
+              style={{
+                opacity: 0,
+                transform: 'translateY(10px)',
+                animation: `fadeSlideIn 0.3s ease-out ${index * 0.1}s forwards`
+              }}
+            >
+              <TechBox tech={tech} />
+            </li>
+          ))}
+          {shouldShowMore && (
+            <li 
+              className={`mr-1.5 mt-2 transition-all duration-300 ease-in-out ${
+                isTransitioning ? 'opacity-0 transform translate-y-2' : 'opacity-100 transform translate-y-0'
+              }`}
+            >
+              <button
+                onClick={handleToggle}
+                className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-400/20 transition-all duration-300 ease-in-out transform hover:scale-105"
+                aria-expanded={isExpanded}
+              >
+                <span className="mr-1">
+                  {isExpanded ? 'Show less' : `+${technologies.length - initialTechCount} more`}
+                </span>
+                <ChevronDown 
+                  className={`h-3 w-3 transition-transform duration-300 ${
+                    isExpanded ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+            </li>
+          )}
+        </ul>
+      </div>
+      <style jsx>{`
+        @keyframes fadeSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 };

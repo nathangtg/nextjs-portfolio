@@ -2,21 +2,24 @@
   {
     "work_id": 1,
     "company": "Valiram Group (POSable)",
-    "title": "DevOps Automation Engineer, Intern",
+    "title": "Site Reliability Engineer, Intern",
     "start_date": "August 2024",
     "end_date": "Present",
-    "description": "Starting internship as a software engineer at POSable from August 2024, a subsidiary of Valiram Group.",
+    "description": "Starting internship as an Site Reliability Engineer Intern at POSable from August 2024, a subsidiary of Valiram Group.",
     "technologies": [
       "SDLC Methodologies",
       "STLC Methodologies",
-      "DevOps Automation",
       "CI/CD Pipelines (YAML, XML)",
-      "Microsoft Azure DevOps",
       "Appium Automation (Java/TestNG/JUnit)",
       "Playwright Automation (JS/TS)",
       "Selenium Automation (Python)",
       "QA Automation",
-      "API Testing"
+      "API Testing",
+      "Performance Testing",
+      "Security Testing",
+      "Performance Monitoring",
+      "Log Monitoring",
+      "Testing Reporting"
     ]
   },
   {
@@ -31,7 +34,12 @@
       "TypeScript",
       "Electron",
       "VSCode Extension API",
-      "Ruby on Rails"
+      "Ruby on Rails",
+      "GitHub Actions",
+      "GitHub Workflows",
+      "Jest",
+      "React Testing Library",
+      "DevOps (Docker, Kubernetes)"
     ]
   },
   {
@@ -45,20 +53,11 @@
       "Network Security",
       "Intranet Configuration",
       "Database Management",
-      "Web Development"
-    ]
-  },
-  {
-    "work_id": 4,
-    "company": "Youth Break the Boundaries Foundation",
-    "title": "Event Staff, Intern",
-    "start_date": "January 2022",
-    "end_date": "February 2022",
-    "description": "Selected as staff for Istanbul Youth Summit 2022 preparation, contributing to event coordination and enhancing attendee experience.",
-    "technologies": [
-      "Wordpress Development",
-      "Website Maintenance",
-      "Website Management"
+      "Web Development",
+      "Full-stack Development",
+      "Performance Monitoring",
+      "Network Testing",
+      "Log Monitoring"
     ]
   },
   {
@@ -73,8 +72,11 @@
       "CSS",
       "JavaScript",
       "Wordpress Development",
-      "Figma Designing",
-      "SEO Meta Tagging"
+      "SEO Meta Tagging",
+      "Python Django",
+      "Database Management",
+      "Web Development",
+      "PostgreSQL"
     ]
   },
   {
@@ -89,7 +91,11 @@
       "Figma Designing",
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "SEO Meta Tagging",
+      "Web Development",
+      "Wordpress Development",
+      "Database Management"
     ]
   }
 ]

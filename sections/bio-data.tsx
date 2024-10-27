@@ -8,9 +8,14 @@ export default function BioData() {
     <div className="w-full h-[100%] sticky top-0 z-10">
       <Draw />
       <NameHeader
-        name="Nathan G"
-        role="Information Technology Student"
-        description="I realize and build my ideas with various technologies and development."
+      name="Nathan G"
+      role={
+        <>
+        Site Reliability Engineer, Intern<br />
+        At Valiram Group (POSable)
+        </>
+      }
+      description="A Tech Generalist."
       />
       <Navbar />
       <IconContainer />

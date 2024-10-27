@@ -4,7 +4,7 @@ export default function NameHeader({
   description,
 }: {
   name: string;
-  role: string;
+  role: any;
   description: string;
 }) {
   return (
