@@ -22,7 +22,7 @@ export default function Experiences() {
   useEffect(() => {
     async function fetchExperiences() {
       try {
-        const res = await fetch("/api/GetExperiences");
+        const res = await fetch("/api/Experiences");
         if (!res.ok) {
           throw new Error("Failed to fetch experiences");
         }

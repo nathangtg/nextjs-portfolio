@@ -9,7 +9,7 @@ export default function Certificates() {
   useEffect(() => {
     async function fetchCertificates() {
       try {
-        const res = await fetch("/api/GetCertificates");
+        const res = await fetch("/api/Certificates");
         if (!res.ok) {
           throw new Error("Failed to fetch certificates");
         }

@@ -9,7 +9,7 @@ export default function Projects() {
   useEffect(() => {
     async function fetchProjects() {
       try {
-        const res = await fetch("/api/GetProjects");
+        const res = await fetch("/api/Projects");
         if (!res.ok) {
           throw new Error("Failed to fetch projects");
         }
