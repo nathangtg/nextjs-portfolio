@@ -20,8 +20,8 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
   const initialTechCount = 3;
   const shouldShowMore = technologies.length > initialTechCount;
 
-  const visibleTechnologies = isExpanded 
-    ? technologies 
+  const visibleTechnologies = isExpanded
+    ? technologies
     : technologies.slice(0, initialTechCount);
 
   const handleToggle = () => {
@@ -66,7 +66,7 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
       </h3>
       <p className="mt-2 text-sm leading-normal">{description}</p>
       <div className="relative">
-        <ul 
+        <ul
           className="mt-2 flex flex-wrap items-center gap-2"
           aria-label="Technologies used"
         >
@@ -84,10 +84,9 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
             </li>
           ))}
           {shouldShowMore && (
-            <li 
-              className={`mr-1.5 mt-2 transition-all duration-300 ease-in-out ${
-                isTransitioning ? 'opacity-0 transform translate-y-2' : 'opacity-100 transform translate-y-0'
-              }`}
+            <li
+              className={`mr-1.5 mt-2 transition-all duration-300 ease-in-out ${isTransitioning ? 'opacity-0 transform translate-y-2' : 'opacity-100 transform translate-y-0'
+                }`}
             >
               <button
                 onClick={handleToggle}
@@ -97,10 +96,9 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
                 <span className="mr-1">
                   {isExpanded ? 'Show less' : `+${technologies.length - initialTechCount} more`}
                 </span>
-                <ChevronDown 
-                  className={`h-3 w-3 transition-transform duration-300 ${
-                    isExpanded ? 'rotate-180' : ''
-                  }`}
+                <ChevronDown
+                  className={`h-3 w-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''
+                    }`}
                 />
               </button>
             </li>
