@@ -41,10 +41,10 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
             rel="noreferrer noopener"
             aria-label={`${title} at ${company} (opens in a new tab)`}
           >
-            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block text-slate-200"></span>
             <span>
               {title} · {""}
-              <span className="inline-block">
+              <span className="inline-block text-slate-200">
                 {company}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
           </a>
         </div>
       </h3>
-      <p className="mt-2 text-sm leading-normal">{description}</p>
+      <p className="mt-2 text-sm leading-normal text-slate-200">{description}</p>
       <div className="relative">
         <ul
           className="mt-2 flex flex-wrap items-center gap-2"
@@ -73,7 +73,7 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
           {visibleTechnologies.map((tech, index) => (
             <li
               key={tech}
-              className="transform transition-all duration-300 ease-in-out"
+              className="transform transition-all duration-300 ease-in-out text-slate-200"
               style={{
                 opacity: 0,
                 transform: 'translateY(10px)',
@@ -85,7 +85,7 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
           ))}
           {shouldShowMore && (
             <li
-              className={`mr-1.5 mt-2 transition-all duration-300 ease-in-out ${isTransitioning ? 'opacity-0 transform translate-y-2' : 'opacity-100 transform translate-y-0'
+              className={`mr-1.5 text-slate-200 mt-2 transition-all duration-300 ease-in-out ${isTransitioning ? 'opacity-0 transform translate-y-2' : 'opacity-100 transform translate-y-0'
                 }`}
             >
               <button
@@ -97,7 +97,7 @@ const ExperienceContent: React.FC<ExperienceContentProps> = ({
                   {isExpanded ? 'Show less' : `+${technologies.length - initialTechCount} more`}
                 </span>
                 <ChevronDown
-                  className={`h-3 w-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''
+                  className={`h-3 w-3 text-slate-200 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''
                     }`}
                 />
               </button>

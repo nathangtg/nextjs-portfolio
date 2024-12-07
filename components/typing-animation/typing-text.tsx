@@ -58,8 +58,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ texts, onComplete }) => {
   }, [animationCompleted, currentIndex, onComplete, texts, count]);
 
   return (
-    <p className={animationCompleted ? "animation-completed" : ""}>
-      <motion.span>{displayText}</motion.span>
+    <p className={animationCompleted ? "animation-completed, text-white" : "text-white"}>
+      <motion.span className="text-white">{displayText}</motion.span>
       {cursorVisible && (
         <span className="cursor absolute w-1 h-5 bg-white"></span>
       )}
