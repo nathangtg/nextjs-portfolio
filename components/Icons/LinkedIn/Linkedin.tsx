@@ -2,7 +2,7 @@ export default function LinkedIn() {
   return (
     <a
       className="block hover:text-slate-200 text-slate-400"
-      href="https://www.linkedin.com/in/nathan-apg/"
+      href="https://www.linkedin.com/in/nathangtg"
       target="_blank"
       rel="noreferrer noopener"
       aria-label="LinkedIn (opens in a new tab)"
